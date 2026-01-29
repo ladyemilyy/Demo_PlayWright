@@ -1,0 +1,23 @@
+{
+  "name": "demo_playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ladyemilyy/Demo_PlayWright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ladyemilyy/Demo_PlayWright/issues"
+  },
+  "homepage": "https://github.com/ladyemilyy/Demo_PlayWright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^25.1.0"
+  }
+}
