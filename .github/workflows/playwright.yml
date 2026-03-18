@@ -29,6 +29,8 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
       - name: Upload Playwright HTML Report
         if: always()
