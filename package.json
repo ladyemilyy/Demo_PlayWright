@@ -1,14 +1,21 @@
 {
   "name": "demo_playwright",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright demo automation tests",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "install:browsers": "npx playwright install"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ladyemilyy/Demo_PlayWright.git"
   },
-  "keywords": [],
+  "keywords": ["playwright", "automation", "testing"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",

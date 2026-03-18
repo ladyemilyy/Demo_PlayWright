@@ -20,7 +20,7 @@ export class TodoPage {
     }
 
     async navigate() {
-        await this.page.goto('/');
+        await this.page.goto('/todomvc/');
     }
 
     async addTodo(todo: string) {
