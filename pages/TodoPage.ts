@@ -8,6 +8,7 @@ export class TodoPage {
     readonly completedFilter: Locator;
     readonly allFilter: Locator;
     readonly clearCompletedButton: Locator;
+    readonly toggleAll: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -17,6 +18,7 @@ export class TodoPage {
         this.completedFilter = page.getByRole('link', { name: 'Completed' });
         this.allFilter = page.getByRole('link', { name: 'All' });
         this.clearCompletedButton = page.getByRole('button', { name: 'Clear completed' });
+        this.toggleAll = page.locator('#toggle-all');
     }
 
     async navigate() {
@@ -39,5 +41,10 @@ export class TodoPage {
 
     async expectTodoCount(count: number) {
         await expect(this.todoItems).toHaveCount(count);
+    }
+
+    async toggleAllTodos() {
+        await this.toggleAll.check();
+        await this.toggleAll.uncheck();
     }
 }

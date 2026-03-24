@@ -55,4 +55,17 @@ test.describe('TodoMVC Tests', () => {
     await todoPage.expectTodoCount(0);
   });
 
+  test('Toggle all todos as completed and then unmark', async ({ page }) => {
+    const todoPage = new TodoPage(page);
+    await todoPage.navigate();
+
+    await todoPage.addTodo(todos.first);
+    await todoPage.addTodo(todos.second);
+    await todoPage.addTodo(todos.third);
+
+    await todoPage.toggleAllTodos();
+
+    await expect(todoPage.todoItems).not.toHaveClass(/completed/);
+  });
+
 });
